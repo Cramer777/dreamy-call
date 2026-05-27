@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import DeepARCamera from "./DeepARCamera";
 
 const APP_ID = import.meta.env.VITE_AGORA_APP_ID;
-const TOKEN = import.meta.env.VITE_AGORA_TOKEN;
+const TOKEN = null;
 const CHANNEL = "room";
 
 const client = AgoraRTC.createClient({
