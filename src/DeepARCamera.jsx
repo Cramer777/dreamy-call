@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import * as deepar from "deepar";
+import DeepAR from "deepar";
 
 export default function DeepARCamera({ filter }) {
   const canvasRef = useRef(null);
