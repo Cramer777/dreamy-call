@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import DeepAR from "deepar";
+import * as DeepAR from "deepar";
 
 export default function DeepARCamera({ filter }) {
   const canvasRef = useRef(null);
@@ -7,7 +7,7 @@ export default function DeepARCamera({ filter }) {
 
   useEffect(() => {
     async function startDeepAR() {
-      const deepar = await DeepAR.initialize({
+      const deepAR = await DeepAR.initialize({
   licenseKey: "7629a976c738d0081423d56b69725b491c5300a833e168e2c63def914b90c63fc9d9cb97bf479fa0",
 
         canvas: canvasRef.current,
