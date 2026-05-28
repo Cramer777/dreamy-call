@@ -7,8 +7,8 @@ export default function DeepARCamera({ filter }) {
 
   useEffect(() => {
     async function startDeepAR() {
-      deeparRef.current = await deepar.initialize({
-        licenseKey: "78233afe8812c6bef7ebde891b5ca6c041d7efddcfcb3b7835d5ad91e072c9d16b6661e09133b36e",
+      const deepar = await DeepAR.initialize({
+  licenseKey: "7629a976c738d0081423d56b69725b491c5300a833e168e2c63def914b90c63fc9d9cb97bf479fa0",
 
         canvas: canvasRef.current,
 
@@ -25,7 +25,7 @@ export default function DeepARCamera({ filter }) {
         },
       });
 
-      await deeparRef.current.startVideo(true);
+      await deeparRef.current.switchEffect(0, "none");
     }
 
     startDeepAR();
